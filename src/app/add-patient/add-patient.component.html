@@ -1,0 +1,49 @@
+<h1>Fiche Patient</h1>
+
+<div>
+  <form  >
+    <div class="row g-3">
+      
+     
+      <div class="col">
+        <label for="exampleFormControlInput1" class="form-label">Nom:</label>
+        <input type="text" class="form-control" placeholder="Nom" aria-label="Nom" [(ngModel)]="patient.nom"  [ngModelOptions]="{standalone: true}">
+      </div>
+      <div class="col">
+        <label for="exampleFormControlInput1" class="form-label">Prénom:</label>
+        <input type="text" class="form-control" placeholder="Prénom" aria-label="Prénom" [(ngModel)]="patient.prenom"  [ngModelOptions]="{standalone: true}">
+      </div>
+      <div class="col">
+        <label for="exampleFormControlInput1" class="form-label">Téléphone:</label>
+        <input type="text" class="form-control" placeholder="+216 ..." aria-label="Tel" [(ngModel)]="patient.telephone"  [ngModelOptions]="{standalone: true}">
+      </div>
+      <div class="col">
+        <label for="exampleFormControlInput1" class="form-label">Date Création Fiche:</label>
+        <input type="text" class="form-control" placeholder="Exemple 12/11/2020" aria-label="DateCreation" [(ngModel)]="patient.date_creation_fiche"  [ngModelOptions]="{standalone: true}">
+      </div>
+      
+      <label for="exampleFormControlInput1" class="form-label">Date De Naissance:</label>
+      <input type="text" class="form-control" placeholder="Exemple: 12/11/1997" aria-label="DateN" [(ngModel)]="patient.date_naissance"  [ngModelOptions]="{standalone: true}"> 
+
+      <label for="exampleFormControlInput1" class="form-label">Métier/Scolarité:</label>
+      <input type="text" class="form-control" placeholder="Métier/Scolarité" aria-label="MS" [(ngModel)]="patient.metier"  [ngModelOptions]="{standalone: true}">  
+
+      <label for="exampleFormControlInput1" class="form-label">Adresse:</label>
+      <input type="text" class="form-control" placeholder="Exemple: 37 Rue .., Mourouj 4" aria-label="Adresse" [(ngModel)]="patient.adresse"  [ngModelOptions]="{standalone: true}"> 
+
+      <label for="exampleFormControlInput1" class="form-label">Motif De Consultation:</label>
+      <input type="text" class="form-control" placeholder="Motif De Consultation" aria-label="Motif" [(ngModel)]="patient.motif_consultation"  [ngModelOptions]="{standalone: true}">
+    
+      <label for="exampleFormControlInput1" class="form-label">Antécedents Médicaux:</label>
+      <input type="text" class="form-control" placeholder="" aria-label="Motif" [(ngModel)]="patient.antecedants_medicaux"  [ngModelOptions]="{standalone: true}">
+
+      <label for="exampleFormControlInput1" class="form-label">Antécédents Dentaires:</label>
+      <input type="text" class="form-control" placeholder="" aria-label="Motif" [(ngModel)]="patient.antecedants_dentaires"  [ngModelOptions]="{standalone: true}">
+
+    </div>
+    <button class="btn btnY" (click)="addPatient()">
+      Enregistrer
+    </button>
+
+  </form>
+</div>

@@ -1,0 +1,55 @@
+<h1>Consultation:</h1>
+
+<h4 > Patient:</h4>
+<table id="patient">
+  <tr>
+    <th *ngFor = "let column of patient">
+      {{column}}
+    </th>
+  </tr>
+
+  <tr *ngFor = "let row of rowsP">
+    <td *ngFor = "let column of patient">
+      {{row[column]}}
+    </td>
+    
+  </tr>
+</table>
+
+<h4 > Les Consultations passées:</h4>
+<table id="intervention">
+  <tr>
+    <th *ngFor = "let column of interventions">
+      {{column}}
+    </th>
+  </tr>
+
+  <tr *ngFor = "let row of rowsI">
+    <td *ngFor = "let column of interventions">
+      {{row[column]}}
+    </td>
+    
+  </tr>
+</table>
+
+
+<div>
+ 
+    <div class="row g-3">
+      <div class="col">
+        <label for="exampleFormControlInput1" class="form-label">Date:</label>
+        <input type="text" [(ngModel)]="intervention.date"  class="form-control" placeholder="Date de la Consultation" aria-label="DateC">
+      </div>
+      <div class="col">
+        <label for="exampleFormControlInput1" class="form-label">Acte:</label>
+        <input type="text" [(ngModel)]="intervention.acte" class="form-control" placeholder="" aria-label="Acte">
+      </div>
+      <div class="col">
+        <label for="exampleFormControlInput1" class="form-label">Recu:</label>
+        <input type="text" [(ngModel)]="intervention.recu" class="form-control" placeholder="" aria-label="Recu">
+      </div>
+      
+    </div>
+    <button class="btn btnY"  (click)="addIntervention()"  >Enregistrer</button>
+ 
+</div>

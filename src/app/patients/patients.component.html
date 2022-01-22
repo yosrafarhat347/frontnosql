@@ -1,0 +1,52 @@
+<h1>Liste Des Patients</h1>
+<hr>
+<form>
+  <input type="text" name="search" placeholder="Recherche..">
+</form>
+
+<table id="users">
+  <tr>
+    <th *ngFor = "let column of headers">
+      {{column}}
+    </th>
+  </tr>
+
+  <tr *ngFor = "let patient of patients">
+    <td>
+      {{patient.nom}}
+    </td>
+    <td>
+      {{patient.prenom}}
+    </td>
+    <td>
+      {{patient.telephone}}
+    </td>
+    <td>
+      {{patient.date_creation_fiche}}
+    </td>
+    <td>
+      {{patient.date_naissance}}
+    </td>
+    <td>
+      {{patient.metier}}
+    </td>
+    <td>
+      {{patient.adresse}}
+    </td>
+    <td>
+      {{patient.motif_consultation}}
+    </td>
+    <td>
+      {{patient.antecedants_medicaux}}
+    </td>
+    <td>
+      {{patient.antecedants_dentaires}}
+    </td>
+    <td> <a (click)="passData(patient)" class=" btn button " >Visualiser</a></td>
+  </tr>
+
+</table>
+
+<div>
+  <router-outlet></router-outlet>
+</div>

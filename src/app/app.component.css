@@ -1,0 +1,26 @@
+.green {
+  background-color:#1B5E20;
+  color: white;
+  
+}
+.centre{
+  text-align: center;
+}
+
+.button{
+  background-color:#1B5E20;
+  color: white;
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+  border-radius: 12px;
+  margin: 13px 12px 12px 10px;
+  font-weight: bold;
+  font-size: medium;
+  border: 2px solid #1B5E20;
+ 
+
+}
+.align{
+  display :flex;
+justify-content: around;
+text-align: center;
+}
